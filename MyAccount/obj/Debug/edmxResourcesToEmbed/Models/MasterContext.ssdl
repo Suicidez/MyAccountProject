@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="MyAccountModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="mstUser">
+    <Key>
+      <PropertyRef Name="RunningId" />
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="RunningId" Type="int" Nullable="false" />
+    <Property Name="UserId" Type="nvarchar" MaxLength="25" Nullable="false" />
+    <Property Name="Password" Type="nvarchar" MaxLength="25" />
+    <Property Name="FirstName" Type="nvarchar" MaxLength="50" />
+    <Property Name="LastName" Type="nvarchar" MaxLength="50" />
+    <Property Name="CompanyName" Type="nvarchar" MaxLength="100" />
+    <Property Name="IsPermission" Type="int" />
+    <Property Name="isCompany" Type="int" />
+    <Property Name="isActive" Type="int" />
+    <Property Name="LoginTimes" Type="int" />
+    <Property Name="isLock" Type="int" />
+    <Property Name="isTrial" Type="int" />
+    <Property Name="StartTrial" Type="datetime" />
+    <Property Name="EndTrial" Type="datetime" />
+    <Property Name="CreateUser" Type="int" />
+    <Property Name="CreateDate" Type="datetime" />
+    <Property Name="UpdateUser" Type="int" />
+    <Property Name="UpdateTime" Type="datetime" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'MyAccount.dbo.v_mstPermission' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="v_mstPermission">
+    <Key>
+      <PropertyRef Name="IsPermission" />
+      <PropertyRef Name="PermissionDesc" />
+    </Key>
+    <Property Name="IsPermission" Type="int" Nullable="false" />
+    <Property Name="PermissionDesc" Type="varchar" MaxLength="9" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="MyAccountModelStoreContainer">
+    <EntitySet Name="mstUser" EntityType="Self.mstUser" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="v_mstPermission" EntityType="Self.v_mstPermission" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [v_mstPermission].[IsPermission] AS [IsPermission], 
+    [v_mstPermission].[PermissionDesc] AS [PermissionDesc]
+    FROM [dbo].[v_mstPermission] AS [v_mstPermission]</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+</Schema>

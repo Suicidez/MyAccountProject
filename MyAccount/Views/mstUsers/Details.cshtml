@@ -1,0 +1,146 @@
+﻿@model MyAccount.Models.MasterModels.mstUser
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>mstUser</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Password)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Password)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FirstName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FirstName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LastName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LastName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CompanyName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CompanyName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IsPermission)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IsPermission)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.isCompany)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.isCompany)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.isActive)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.isActive)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LoginTimes)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LoginTimes)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.isLock)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.isLock)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.isTrial)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.isTrial)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.StartTrial)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.StartTrial)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EndTrial)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EndTrial)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CreateUser)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CreateUser)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CreateDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CreateDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UpdateUser)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UpdateUser)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UpdateTime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UpdateTime)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

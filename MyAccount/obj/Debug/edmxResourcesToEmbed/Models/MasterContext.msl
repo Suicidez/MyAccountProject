@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="MyAccountModelStoreContainer" CdmEntityContainer="Entities">
+    <EntitySetMapping Name="mstUser">
+      <EntityTypeMapping TypeName="MyAccountModel.mstUser">
+        <MappingFragment StoreEntitySet="mstUser">
+          <ScalarProperty Name="RunningId" ColumnName="RunningId" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="CompanyName" ColumnName="CompanyName" />
+          <ScalarProperty Name="IsPermission" ColumnName="IsPermission" />
+          <ScalarProperty Name="isCompany" ColumnName="isCompany" />
+          <ScalarProperty Name="isActive" ColumnName="isActive" />
+          <ScalarProperty Name="LoginTimes" ColumnName="LoginTimes" />
+          <ScalarProperty Name="isLock" ColumnName="isLock" />
+          <ScalarProperty Name="isTrial" ColumnName="isTrial" />
+          <ScalarProperty Name="StartTrial" ColumnName="StartTrial" />
+          <ScalarProperty Name="EndTrial" ColumnName="EndTrial" />
+          <ScalarProperty Name="CreateUser" ColumnName="CreateUser" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="UpdateUser" ColumnName="UpdateUser" />
+          <ScalarProperty Name="UpdateTime" ColumnName="UpdateTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="v_mstPermission">
+      <EntityTypeMapping TypeName="MyAccountModel.v_mstPermission">
+        <MappingFragment StoreEntitySet="v_mstPermission">
+          <ScalarProperty Name="IsPermission" ColumnName="IsPermission" />
+          <ScalarProperty Name="PermissionDesc" ColumnName="PermissionDesc" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

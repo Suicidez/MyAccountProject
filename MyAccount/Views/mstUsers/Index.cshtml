@@ -1,0 +1,123 @@
+﻿@model IEnumerable<MyAccount.Models.MasterModels.mstUser>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Password)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FirstName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LastName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CompanyName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IsPermission)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.isCompany)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.isActive)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LoginTimes)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.isLock)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.isTrial)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.StartTrial)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EndTrial)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CreateUser)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CreateDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UpdateUser)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UpdateTime)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Password)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FirstName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LastName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CompanyName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IsPermission)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.isCompany)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.isActive)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LoginTimes)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.isLock)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.isTrial)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.StartTrial)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EndTrial)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CreateUser)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CreateDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UpdateUser)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UpdateTime)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+        </td>
+    </tr>
+}
+
+</table>

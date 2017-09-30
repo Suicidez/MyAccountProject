@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="MyAccountModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="mstUser">
+    <Key>
+      <PropertyRef Name="RunningId" />
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="RunningId" Type="Int32" Nullable="false" />
+    <Property Name="UserId" Type="String" MaxLength="25" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Password" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="FirstName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="LastName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CompanyName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="IsPermission" Type="Int32" />
+    <Property Name="isCompany" Type="Int32" />
+    <Property Name="isActive" Type="Int32" />
+    <Property Name="LoginTimes" Type="Int32" />
+    <Property Name="isLock" Type="Int32" />
+    <Property Name="isTrial" Type="Int32" />
+    <Property Name="StartTrial" Type="DateTime" Precision="3" />
+    <Property Name="EndTrial" Type="DateTime" Precision="3" />
+    <Property Name="CreateUser" Type="Int32" />
+    <Property Name="CreateDate" Type="DateTime" Precision="3" />
+    <Property Name="UpdateUser" Type="Int32" />
+    <Property Name="UpdateTime" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="v_mstPermission">
+    <Key>
+      <PropertyRef Name="IsPermission" />
+      <PropertyRef Name="PermissionDesc" />
+    </Key>
+    <Property Name="IsPermission" Type="Int32" Nullable="false" />
+    <Property Name="PermissionDesc" Type="String" MaxLength="9" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="Entities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="mstUser" EntityType="Self.mstUser" />
+    <EntitySet Name="v_mstPermission" EntityType="Self.v_mstPermission" />
+  </EntityContainer>
+</Schema>

@@ -1,5 +1,7 @@
-﻿@{
+﻿@model MyAccount.Models.LoginModels
+@{
     ViewBag.Title = "Home Page";
+
 }
 @Styles.Render("~/Content/main");
 <div class="container">
@@ -10,14 +12,14 @@
      </div>
     <div class="row main">
         <div class="main-login main-center">
-            <form class="" method="post" action="#">
-
+            @using (Html.BeginForm("CheckLogin", "Home", FormMethod.Post))
+            {
                 <div class="form-group">
                     <label for="name" class="cols-sm-2 control-label">User Name</label>
                     <div class="cols-sm-10">
                         <div class="input-group">
                             <span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
-                            @Html.TextBox("txtUserName", null, new { @class = "form-control", @placeholder = "Please enter username" , @required = "required" })
+                            @Html.TextBoxFor(model => model.UserName, new { @class = "form-control", @placeholder = "Please enter username", @required = "required" })
 
                         </div>
                     </div>
@@ -29,7 +31,7 @@
                     <div class="cols-sm-10">
                         <div class="input-group">
                             <span class="input-group-addon"><i class="fa fa-envelope fa" aria-hidden="true"></i></span>
-                            @Html.Password("txtPassword", null, new { @class = "form-control", @placeholder = "Please enter password" , @required = "required" })
+                            @Html.TextBoxFor(model => model.Password, new { @class = "form-control", @placeholder = "Please enter password", @required = "required" })
                         </div>
                     </div>
                 </div>
@@ -41,19 +43,20 @@
                         <input type="submit" value="Sign in" style="max-width : 100%;width : 100%" class="btn  btn-sm" />
                      
                     </div>
-                  
+
                 <div class="form-group">
                     <div style="width : 45%;display : inline-block">
-                        <input type="button" value="Register For Free-Trial 30 days" style="max-width : 100%;width : 100%;white-space: normal;" class="btn btn-success btn-sm" />
+                        @Html.ActionLink("Register For Free-Trial 30 days", "MasterSite", "Home", new { @style = "max-width : 100%;width : 100%;white-space: normal", @class = "btn btn-success btn-sm" })                        
                     </div>
                     <div style="width : 45%;display : inline-block;padding-left : 20px">
-                        <input type="button" value="Buy product and join with us" style="max-width : 120%;width : 120%;white-space: normal;" class="btn btn-success btn-sm" />
+                        @Html.ActionLink("Buy product and join with us", "MasterSite", "Home", new { @style = "max-width : 120%;width : 120%;white-space: normal", @class = "btn btn-success btn-sm" })
+                        
                     </div>
 
                 </div>
 
 
-</form>
+            }
 
       </div>
     </div>
