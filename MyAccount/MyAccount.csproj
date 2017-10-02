@@ -202,6 +202,7 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\MasterControllers\mstUsersController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -209,6 +210,7 @@
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\LoginModels.cs" />
+    <Compile Include="Models\MainModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\MasterModels\mstUser.cs" />
     <Compile Include="Models\MyAccountContext.cs" />
@@ -1067,8 +1069,8 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Class\" />
     <Folder Include="Controllers\APControllers\" />
-    <Folder Include="Controllers\MasterControllers\" />
     <Folder Include="Models\APModels\" />
     <Folder Include="Views\AP\" />
   </ItemGroup>

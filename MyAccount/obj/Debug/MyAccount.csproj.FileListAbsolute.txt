@@ -161,3 +161,4 @@ C:\Users\GUNz-Laptop\Documents\GitHub\MyAccountProject\MyAccount\bin\Microsoft.O
 C:\Users\GUNz-Laptop\Documents\GitHub\MyAccountProject\MyAccount\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
 C:\Users\GUNz-Laptop\Documents\GitHub\MyAccountProject\MyAccount\obj\Debug\MyAccount.dll
 C:\Users\GUNz-Laptop\Documents\GitHub\MyAccountProject\MyAccount\obj\Debug\MyAccount.pdb
+C:\Users\GUNz-Laptop\Documents\GitHub\MyAccountProject\MyAccount\obj\Debug\MyAccount.csprojResolveAssemblyReference.cache

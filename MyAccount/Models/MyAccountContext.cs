@@ -18,11 +18,13 @@ namespace MyAccount.Models
         public MyAccountContext() : base("name=MyAccountContext")
         {
             Database.Connection.ConnectionString = "server=DESKTOP-7VDPRQN\\SQLEXPRESS;database=MyAccount;uid=sa;password=passw@rd";
+            Database.Connection.Open();
         }
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
         }
-        public DbSet<MasterModels.mstUser> mstUser { get; set; }
+        public  DbSet<MasterModels.mstUser> mstUser { get; set; }
+      
     }
 }

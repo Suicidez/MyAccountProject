@@ -13,8 +13,9 @@ namespace MyAccount.Models.MasterModels
         [Column(Order = 1)]
         public int RunningId { get; set; }
         [Key]
-        [Column(Order = 2)]
+        [Column(Order = 2)]     
         public string UserId { get; set; }
+        [DataType(DataType.Password)]
         public string Password { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
@@ -31,5 +32,8 @@ namespace MyAccount.Models.MasterModels
         public Nullable<System.DateTime> CreateDate { get; set; }
         public Nullable<int> UpdateUser { get; set; }
         public Nullable<System.DateTime> UpdateTime { get; set; }
+
+        [NotMapped]
+        public V_Models.v_mstPermission mstPermission { get; set; }
     }
 }
